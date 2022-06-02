@@ -1,13 +1,18 @@
 export default class CurrencyExchager {
-  constructor(ex1, ex2, ex3) {
-    this.ex1 = ex1;
-    this.ex2 = ex2;
-    this.ex3 = ex3;
+  static getCurrency(dollar) {
+    return new Promise(function (resolve, reject){
+      let request = new XMLHttpRequest();
+      const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}&/latest/USD`;
+      request.onload = function () {
+        if (this.status === 200) {
+          resolve(request.response);
+        } else {
+          reject(request.response);
+        }
+      };
+      request.open("GET", url, true);
+      request.send();
+    });
   }
 
-  function() {
-    
-  }    
 }
-
-//business logic

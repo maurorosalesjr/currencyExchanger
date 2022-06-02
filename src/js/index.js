@@ -5,6 +5,18 @@ import './css/styles.css';
 import CurrencyExchager  from './currency.js';
 
 
+function clearFields() {
+  $('#dollar').val("");
+  $('.showErrors').text("");
+  $('.showResult').append("");
+}
+
 $(document).ready(function() {
-  // ui logic
+  $('#currencyExchange').click(function(){
+    let dollar = $(`#dollar`).val("");
+    clearFields();
+    let promise = CurrencyExchager.getCurrency(dollar);
+
+    
+  })
 });
