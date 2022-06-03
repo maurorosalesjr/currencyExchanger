@@ -14,5 +14,10 @@ export default class CurrencyExchager {
       request.send();
     });
   }
-
 }
+
+/*function multCurrency() {
+  if(parseInt(dollar) < 0) {
+    $('.showResult').html("<p>Unfortunately, we cannot process debt</p>")
+  }
+}*/

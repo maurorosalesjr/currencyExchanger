@@ -1,3 +1,20 @@
 body {
-  background-color: burlywood;
+  background-color: aliceblue;
+  margin-left: 10%;
+  margin-right: 10%;
 }
+
+h1 {
+  text-align: center;
+  border: solid 5px darkcyan;
+  border-style: groove;
+  background-color: lightcyan;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-shadow: 2px 2px gray;
+}
+
+/*.showResult{
+  display: none;
+  background-color: lightcyan;
+}*/
