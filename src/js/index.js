@@ -22,10 +22,10 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       if(parseInt(dollar) < 0) {
-        $('.showResult').html("<p>Unfortunately, we cannot process debt</p>")
-        } else {
-        $('.showResult').html(parseInt(dollar) + "<p> US Dollars gets YOU: </p>" + "\n" + Math.floor(`${body.conversion_rates.JPY}` * parseInt(dollar))+ "<p> Japanese Yen,</p>" + "\n" + Math.floor(`${body.conversion_rates.EUR}` * parseInt(dollar)) + "<p>Euros,</p>" + "\n" + Math.floor(`${body.conversion_rates.MXN}` * parseInt(dollar)) + "<p>Mexican Pesos,</p>" + "\n" + Math.floor(`${body.conversion_rates.UAH}` * parseInt(dollar))+ "<p>Ukrainian Hyrvnia</p>" + Math.floor(`${body.conversion_rates.CAD}` * parseInt(dollar)) + "<p>Canadian Dollars</p>" + "\n" );
-        }
+        $('.showResult').html("<p>Unfortunately, we cannot process debt at this time.</p>");
+      } else {
+        $('.showResult').html(parseInt(dollar) + "<p> US Dollars gets YOU: </p>" + "\n" + Math.round(`${body.conversion_rates.JPY}` * parseInt(dollar) * 100) / 100 + "<p> Japanese Yen,</p>" + "\n" + Math.round(`${body.conversion_rates.EUR}` * parseInt(dollar) * 100) / 100 + "<p>Euros,</p>" + "\n" + Math.round(`${body.conversion_rates.MXN}` * parseInt(dollar) * 100) / 100 + "<p>Mexican Pesos,</p>" + "\n" + Math.round(`${body.conversion_rates.UAH}` * parseInt(dollar) * 100) / 100 + "<p>Ukrainian Hyrvnia</p>" + Math.round(`${body.conversion_rates.CAD}` * parseInt(dollar) * 100 ) / 100 + "<p>Canadian Dollars</p>" + "\n" );
+      }
     }, function(error) {
       $('.showErrors').text(`there was an error processing your request: ${error}`);
     });

@@ -16,8 +16,3 @@ export default class CurrencyExchager {
   }
 }
 
-/*function multCurrency() {
-  if(parseInt(dollar) < 0) {
-    $('.showResult').html("<p>Unfortunately, we cannot process debt</p>")
-  }
-}*/

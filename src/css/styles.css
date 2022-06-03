@@ -14,7 +14,6 @@ h1 {
   text-shadow: 2px 2px gray;
 }
 
-/*.showResult{
-  display: none;
-  background-color: lightcyan;
-}*/
+img {
+  display: block;
+}
