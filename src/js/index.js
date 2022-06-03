@@ -6,7 +6,7 @@ import CurrencyExchager  from './currency.js';
 
 
 function clearFields() {
-  $('#dollar').val("");
+  $('#dollar').val();
   $('.showErrors').text("");
   $('.showResult').html("");
 }
@@ -15,7 +15,6 @@ function clearFields() {
 $(document).ready(function() {
   $('#currencyExchange').click(function(){
     let dollar = $('#dollar').val();
-    console.log(dollar);
     clearFields();
     let promise = CurrencyExchager.getCurrency(dollar);
 

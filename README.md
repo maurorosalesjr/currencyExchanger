@@ -1,8 +1,8 @@
-# _{Application Name}_
+# Currancy Exchanger
 
 #### By Mauro Rosales Jr
 
-#### _{Brief description of application}_
+#### Converts US Dollars to Japanese Yen, Euros, Mexican Pesos, Ukrainian Hyrvnia and Canadian Dollars
 
 ## Technologies Used
 
@@ -13,27 +13,33 @@
 * Lint
 * Jest
 * Webpack
+* Exchange Rate-API
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This App converts the us dollar amount the user inputs into the input field, into Japanese Yen, Euros, Mexican Pesos, Ukrainian Hyrvnia and Canadian Dollars
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Go to https://github.com/maurorosalesjr/currencyExchanger
+* find green "CODE" button, click and move to the "download zip" area and click to download
+* use your computer to unzip file, and open Terminal to folder location
+* open folder with VSCODE
+* once the app is opened in VSCODE, create a .env file in the root.
+* visit the ExchangeRate-API site at https://www.exchangerate-api.com. Input your email address and click the "Get Free Key" button.
+You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
+* store your new API Key into the .env file by typeing API_KEY=(your API Key)
+* in your Terminal type "npm install" and hit enter
+* once everything has been installed, type "npm run build" into terminal
+* once built, still in your terminal, type "npm run start"
+* the app will open a browser window, then you can put in a number to watch the app convert that number (US Dollar amount) into 5 different currencies
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
-
+* No Known Bugs
 ## License
+* open source
 
 If you have any questions or concerns, email me at mauro.rosales247@gmail.com
-Copyright (c) _date_ Mauro Rosales Jr
+Copyright (c) 6/22 Mauro Rosales Jr
